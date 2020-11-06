@@ -1,5 +1,5 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-export const App = () => {
-  return <div>renders App</div>
+export const App: FC = () => {
+  return <div>{'renders App'}</div>
 }
