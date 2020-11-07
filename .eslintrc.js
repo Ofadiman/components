@@ -1,7 +1,12 @@
 module.exports = {
   env: { browser: true, commonjs: true, es2020: true, jest: true, node: true },
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaFeatures: { jsx: true }, ecmaVersion: 2020, project: './tsconfig.json', sourceType: 'module' },
+  parserOptions: {
+    ecmaFeatures: { jsx: true },
+    ecmaVersion: 2020,
+    project: './tsconfig.eslint.json',
+    sourceType: 'module'
+  },
   plugins: [
     /**
      * @info global plugins
@@ -16,7 +21,7 @@ module.exports = {
     'typescript-sort-keys',
     'unicorn',
     /**
-     * @info plugins for react
+     * @info react plugins
      */
     'better-styled-components',
     'jest-dom',
@@ -282,7 +287,7 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': ['error', { int32Hint: false }],
     'space-unary-ops': 'off',
-    'spaced-comment': ['error', 'always'],
+    'spaced-comment': 'off',
     'strict': 'off',
     'switch-colon-spacing': 'error',
     'symbol-description': 'error',
@@ -399,7 +404,7 @@ module.exports = {
     'import/no-unused-modules': 'error',
     'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
     'import/no-webpack-loader-syntax': 'off',
-    'import/order': ['error', { 'newlines-between': 'always' }],
+    'import/order': 'off',
     'import/prefer-default-export': 'off',
     'import/unambiguous': 'off',
 
@@ -438,18 +443,18 @@ module.exports = {
     '@typescript-eslint/method-signature-style': ['error', 'property'],
     '@typescript-eslint/naming-convention': [
       'error',
-      { selector: 'typeLike', format: ['StrictPascalCase'] },
-      { selector: 'variable', format: ['strictCamelCase', 'StrictPascalCase'] },
+      { selector: 'typeLike', format: ['PascalCase'] },
+      { selector: 'variable', format: ['camelCase', 'PascalCase'] },
       {
         selector: 'variable',
         types: ['boolean'],
-        format: ['StrictPascalCase'],
+        format: ['PascalCase'],
         prefix: ['is', 'should', 'has', 'can', 'did', 'will']
       },
-      { selector: 'function', format: ['StrictPascalCase', 'strictCamelCase'] },
-      { selector: 'method', format: ['strictCamelCase'] },
-      { selector: 'enumMember', format: ['StrictPascalCase'] },
-      { selector: 'typeParameter', format: ['StrictPascalCase'] }
+      { selector: 'function', format: ['PascalCase', 'camelCase'] },
+      { selector: 'method', format: ['camelCase'] },
+      { selector: 'enumMember', format: ['PascalCase'] },
+      { selector: 'typeParameter', format: ['PascalCase'] }
     ],
     '@typescript-eslint/no-array-constructor': 'off',
     '@typescript-eslint/no-base-to-string': 'error',
@@ -511,7 +516,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
-    '@typescript-eslint/prefer-readonly-parameter-types': 'error',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
@@ -794,6 +799,21 @@ module.exports = {
     'better-styled-components/sort-declarations-alphabetically': 'error'
   },
   overrides: [
+    {
+      files: ['plopfile.ts'],
+      rules: {
+        'import/no-default-export': 'off'
+      }
+    },
+    {
+      files: ['codegen/**/*.ts'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off'
+      }
+    },
     {
       files: ['*.js', '*.jsx'],
       parser: 'babel-eslint',

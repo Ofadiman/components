@@ -17,10 +17,5 @@
     "target": "ES5",
     "typeRoots": ["node_modules/@types", "@types"]
   },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "Commonjs"
-    }
-  },
-  "include": ["src", "@types"]
+  "include": ["."]
 }
