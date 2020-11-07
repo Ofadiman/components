@@ -89,7 +89,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'indent': 'off',
     'init-declarations': 'off',
-    'jsx-quotes': ['error', 'prefer-double'],
+    'jsx-quotes': 'off',
     'key-spacing': ['error', { afterColon: true, beforeColon: false }],
     'keyword-spacing': ['error', { after: true, before: true }],
     'line-comment-position': ['error', { position: 'above' }],
@@ -269,7 +269,7 @@ module.exports = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'quote-props': 'off',
-    'quotes': 'off',
+    'quotes': ['error', 'backtick'],
     'radix': 'error',
     'require-atomic-updates': 'error',
     'require-await': 'off',
@@ -375,7 +375,7 @@ module.exports = {
     'import/first': 'error',
     'import/group-exports': 'off',
     'import/max-dependencies': 'off',
-    'import/named': 'error',
+    'import/named': 'off',
     'import/namespace': 'error',
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
@@ -502,7 +502,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
     '@typescript-eslint/no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-useless-constructor': 'off',
     '@typescript-eslint/no-var-requires': 'off',
@@ -688,7 +688,10 @@ module.exports = {
     'testing-library/await-async-utils': 'error',
     'testing-library/await-fire-event': 'error',
     'testing-library/consistent-data-testid': ['error', { testIdPattern: '^test-id-.*' }],
-    'testing-library/no-await-sync-events': 'error',
+    /**
+     * @info This rule breaks storybook.
+     */
+    // 'testing-library/no-await-sync-events': 'error',
     'testing-library/no-await-sync-query': 'error',
     'testing-library/no-debug': 'error',
     'testing-library/no-dom-import': ['error', 'react'],
@@ -812,6 +815,12 @@ module.exports = {
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off'
+      }
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        quotes: 'off'
       }
     },
     {

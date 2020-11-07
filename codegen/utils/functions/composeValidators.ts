@@ -1,6 +1,6 @@
 /**
  * This function is supposed to be used in plop generator.
- * It takes validator functions, calls every validator function with the current prompt value and returns the first error.
+ * It takes validator creators, calls every validator function with the current prompt value and returns the first error.
  */
 export const composeValidators = (...validatorFunctions: ((promptValue: string) => boolean | string)[]) => (
   promptValue: string
@@ -10,7 +10,7 @@ export const composeValidators = (...validatorFunctions: ((promptValue: string) 
   validatorFunctions.forEach((validatorFunction) => {
     const validationResult = validatorFunction(promptValue)
 
-    if (typeof validationResult === 'string') {
+    if (typeof validationResult === `string`) {
       validationErrors.push(validationResult)
     }
   })
