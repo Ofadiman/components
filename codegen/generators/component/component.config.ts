@@ -9,7 +9,7 @@ import { componentActions } from './component.actions'
 import { Component } from './component.const'
 
 export const componentConfig: PlopGeneratorConfig = {
-  actions: (answers) => {
+  actions: (answers: Answers | undefined) => {
     return answers?.[Component.ShouldGenerateCode] ? componentActions : []
   },
   description: 'Generate a component.',

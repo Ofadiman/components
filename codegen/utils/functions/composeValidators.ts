@@ -10,7 +10,7 @@ export const composeValidators = (...validatorFunctions: ((promptValue: string) 
   validatorFunctions.forEach((validatorFunction) => {
     const validationResult = validatorFunction(promptValue)
 
-    if (typeof validationResult === `string`) {
+    if (typeof validationResult === 'string') {
       validationErrors.push(validationResult)
     }
   })

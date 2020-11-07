@@ -269,7 +269,7 @@ module.exports = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'quote-props': 'off',
-    'quotes': ['error', 'backtick'],
+    'quotes': ['error', 'single'],
     'radix': 'error',
     'require-atomic-updates': 'error',
     'require-await': 'off',
@@ -815,12 +815,6 @@ module.exports = {
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off'
-      }
-    },
-    {
-      files: ['*.d.ts'],
-      rules: {
-        quotes: 'off'
       }
     },
     {
