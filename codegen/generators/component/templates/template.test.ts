@@ -1,9 +1,9 @@
 import { Component } from '../component.const'
 
 export const template = `
-import { render } from '@testing-library/react'
 import React from 'react'
 
+import { renderWithProviders } from '../../utils/tests/renderWithProviders'
 import { {{ ${Component.Name} }} } from './{{ ${Component.Name} }}.component'
 
 describe(\`{{ ${Component.Name} }} component\`, () => {

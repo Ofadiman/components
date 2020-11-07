@@ -1,10 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
 
+import RobotoRegular from '../assets/fonts/Roboto-Regular.ttf'
 import { createTypography } from './creators/createTypography'
 
 const typography = createTypography()
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: Roboto;
+    src: url(${RobotoRegular});
+    font-weight: normal;
+    font-style: normal;
+  }
+  
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;

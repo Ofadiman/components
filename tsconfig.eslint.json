@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,5 +17,5 @@
     "target": "ES5",
     "typeRoots": ["node_modules/@types", "@types"]
   },
-  "include": ["."]
+  "include": ["src", "codegen", "storybook", "@types"]
 }
