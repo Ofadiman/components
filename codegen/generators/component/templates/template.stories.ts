@@ -4,7 +4,7 @@ export const template = `
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import { {{ ${Component.Name} }} } from './{{ ${Component.Name} }}.component'
+import { {{ ${Component.Vars.Name} }} } from './{{ ${Component.Vars.Name} }}.component'
 
-storiesOf(\`{{ ${Component.Name} }}\`, module).add(\`Default\`, () => <{{ ${Component.Name} }} />)
+storiesOf(\`{{ ${Component.Vars.Name} }}\`, module).add(\`Default\`, () => <{{ ${Component.Vars.Name} }} />)
 `

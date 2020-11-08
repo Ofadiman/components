@@ -10,13 +10,13 @@ import { Component } from './component.const'
 
 export const componentConfig: PlopGeneratorConfig = {
   actions: (answers: Answers | undefined) => {
-    return answers?.[Component.ShouldGenerateCode] ? componentActions : []
+    return answers?.[Component.Vars.ShouldGenerateCode] ? componentActions : []
   },
   description: 'Generate a component.',
   prompts: [
     {
       message: 'Component name (pascal case string):',
-      name: Component.Name,
+      name: Component.Vars.Name,
       type: 'input',
       validate: composeValidators(
         requireInput('Component name cannot be empty!'),
@@ -29,9 +29,9 @@ export const componentConfig: PlopGeneratorConfig = {
         { name: 'No', value: false }
       ],
       message: (answers: Answers): string => {
-        return `Do you want to generate ${green(answers[Component.Name])} component?`
+        return `Do you want to generate ${green(answers[Component.Vars.Name])} component?`
       },
-      name: Component.ShouldGenerateCode,
+      name: Component.Vars.ShouldGenerateCode,
       type: 'list'
     }
   ]

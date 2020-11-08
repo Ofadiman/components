@@ -4,27 +4,27 @@ import { Component } from './component.const'
 
 export const componentActions: ActionType[] = [
   {
-    path: `src/components/{{ ${Component.Name} }}/{{ ${Component.Name} }}.component.tsx`,
+    path: `src/components/{{ ${Component.Vars.Name} }}/{{ ${Component.Vars.Name} }}.component.tsx`,
     template: require('./templates/template.component').template,
     type: 'add'
   },
   {
-    path: `src/components/{{ ${Component.Name} }}/{{ ${Component.Name} }}.styles.ts`,
+    path: `src/components/{{ ${Component.Vars.Name} }}/{{ ${Component.Vars.Name} }}.styles.ts`,
     template: require('./templates/template.styles').template,
     type: 'add'
   },
   {
-    path: `src/components/{{ ${Component.Name} }}/{{ ${Component.Name} }}.test.tsx`,
+    path: `src/components/{{ ${Component.Vars.Name} }}/{{ ${Component.Vars.Name} }}.test.tsx`,
     template: require('./templates/template.test').template,
     type: 'add'
   },
   {
-    path: `src/components/{{ ${Component.Name} }}/{{ ${Component.Name} }}.types.ts`,
+    path: `src/components/{{ ${Component.Vars.Name} }}/{{ ${Component.Vars.Name} }}.types.ts`,
     template: require('./templates/template.types').template,
     type: 'add'
   },
   {
-    path: `src/components/{{ ${Component.Name} }}/{{ ${Component.Name} }}.stories.tsx`,
+    path: `src/components/{{ ${Component.Vars.Name} }}/{{ ${Component.Vars.Name} }}.stories.tsx`,
     template: require('./templates/template.stories').template,
     type: 'add'
   }

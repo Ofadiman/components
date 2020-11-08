@@ -3,10 +3,10 @@ import { Component } from '../component.const'
 export const template = `
 import React from 'react'
 
-import { Styled{{ ${Component.Name} }} } from './{{ ${Component.Name} }}.styles'
-import { {{ ${Component.Name} }}Props } from './{{ ${Component.Name} }}.types'
+import { Styled{{ ${Component.Vars.Name} }} } from './{{ ${Component.Vars.Name} }}.styles'
+import { {{ ${Component.Vars.Name} }}Props } from './{{ ${Component.Vars.Name} }}.types'
 
-export const {{ ${Component.Name} }}: FC<{{ ${Component.Name} }}Props> = ({ className }) => {
-  return <Styled{{ ${Component.Name} }} className={className}>{\`{{ ${Component.Name} }}\`}</Styled{{ ${Component.Name} }}>
+export const {{ ${Component.Vars.Name} }}: FC<{{ ${Component.Vars.Name} }}Props> = ({ className }) => {
+  return <Styled{{ ${Component.Vars.Name} }} className={className}>{\`{{ ${Component.Vars.Name} }}\`}</Styled{{ ${Component.Vars.Name} }}>
 }
 `

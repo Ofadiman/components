@@ -4,11 +4,11 @@ export const template = `
 import React from 'react'
 
 import { renderWithProviders } from '../../utils/tests/renderWithProviders'
-import { {{ ${Component.Name} }} } from './{{ ${Component.Name} }}.component'
+import { {{ ${Component.Vars.Name} }} } from './{{ ${Component.Vars.Name} }}.component'
 
-describe(\`{{ ${Component.Name} }} component\`, () => {
+describe(\`{{ ${Component.Vars.Name} }} component\`, () => {
   it(\`should match inline snapshot\`, () => {
-    const { asFragment } = render(<{{ ${Component.Name} }} />)
+    const { asFragment } = renderWithProviders(<{{ ${Component.Vars.Name} }} />)
 
     expect(asFragment()).toMatchInlineSnapshot()
   })

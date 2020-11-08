@@ -1,5 +1,8 @@
-export enum Component {
-  Generator = 'Component',
-  Name = 'name',
-  ShouldGenerateCode = 'ShouldGenerateCode'
+export namespace Component {
+  export const Generator = 'Component'
+
+  export enum Vars {
+    Name = 'name',
+    ShouldGenerateCode = 'ShouldGenerateCode'
+  }
 }

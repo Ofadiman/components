@@ -17,5 +17,5 @@
     "target": "ES5",
     "typeRoots": ["node_modules/@types", "@types"]
   },
-  "include": ["src", "codegen", "storybook", "@types"]
+  "include": ["src", "codegen", "storybook", "@types", "plopfile.ts"]
 }
