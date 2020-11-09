@@ -18,22 +18,22 @@ describe('Stringify component', () => {
     expect(asFragment()).toMatchInlineSnapshot(`
       <DocumentFragment>
         <pre
-          class="sc-bdfBwQ fxwxYB"
+          class="sc-bdfBwQ fEZQJU"
         >
           null
         </pre>
         <pre
-          class="sc-bdfBwQ fxwxYB"
+          class="sc-bdfBwQ fEZQJU"
         >
           "String"
         </pre>
         <pre
-          class="sc-bdfBwQ fxwxYB"
+          class="sc-bdfBwQ fEZQJU"
         >
           19872
         </pre>
         <pre
-          class="sc-bdfBwQ fxwxYB"
+          class="sc-bdfBwQ fEZQJU"
         >
           {
         "foo": {
@@ -42,7 +42,7 @@ describe('Stringify component', () => {
       }
         </pre>
         <pre
-          class="sc-bdfBwQ fxwxYB"
+          class="sc-bdfBwQ fEZQJU"
         >
           [
         1,
