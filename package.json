@@ -5,8 +5,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "react-scripts build",
-    "build-storybook": "build-storybook -s public --no-dll --config-dir storybook",
+    "build": "build-storybook -s public --no-dll --config-dir storybook",
     "gen": "plop",
     "check:typescript": "tsc --build tsconfig.eslint.json",
     "eslint:find:deprecated": "eslint-find-rules --deprecated --no-error .eslintrc.js",
@@ -14,7 +13,6 @@
     "lint:check": "eslint {src,codegen,storybook}/**/*.{ts,tsx,js,jsx}",
     "lint:fix": "eslint {src,codegen,storybook}/**/*.{ts,tsx,js,jsx} --fix",
     "postgen": "eslint -f ./eslint.formatter.js {src,codegen,storybook}/**/*.{ts,tsx,js,jsx} --fix || exit 0",
-    "start": "react-scripts start",
     "storybook": "start-storybook -p 6006 -s src/assets --no-dll --config-dir storybook",
     "test": "react-scripts test",
     "test:ci": "CI=true react-scripts test"
