@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { renderWithProviders } from '../../utils/tests/renderWithProviders'
+import { renderComponent } from '../../utils/functions/renderComponent/renderComponent'
 import { TripleArmSpinner } from './TripleArmSpinner.component'
 
 describe('TripleArmSpinner component', () => {
   it('should match inline snapshot', () => {
-    const { asFragment } = renderWithProviders(<TripleArmSpinner />)
+    const { asFragment } = renderComponent(<TripleArmSpinner />)
 
     expect(asFragment()).toMatchInlineSnapshot(`
       <DocumentFragment>

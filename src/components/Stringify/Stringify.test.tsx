@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { renderWithProviders } from '../../utils/tests/renderWithProviders'
+import { renderComponent } from '../../utils/functions/renderComponent/renderComponent'
 import { Stringify } from './Stringify.component'
 
 describe('Stringify component', () => {
   it('should match inline snapshot', () => {
-    const { asFragment } = renderWithProviders(
+    const { asFragment } = renderComponent(
       <>
         <Stringify value={null} />
         <Stringify value={'String'} />

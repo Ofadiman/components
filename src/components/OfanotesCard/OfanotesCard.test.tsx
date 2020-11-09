@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { renderWithProviders } from '../../utils/tests/renderWithProviders'
+import { renderComponent } from '../../utils/functions/renderComponent/renderComponent'
 import { OfanotesCard } from './OfanotesCard.component'
 
 describe('OfanotesCard component', () => {
   it('should match inline snapshot', () => {
-    const { asFragment } = renderWithProviders(
+    const { asFragment } = renderComponent(
       <OfanotesCard
         buttonText={'Red alert, beauty!'}
         description={'Tremble without vision, and we won’t translate a girl.'}
