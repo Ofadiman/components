@@ -5,5 +5,14 @@ module.exports = {
     '@storybook/preset-create-react-app',
     'storybook-addon-styled-component-theme/dist/register'
   ],
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)']
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  webpackFinal: async (config) => {
+    config.plugins.forEach((plugin) => {
+      if (plugin.options && plugin.options.eslintPath) {
+        plugin.options = { ...plugin.options, extensions: ['.stories.tsx'] }
+      }
+    })
+
+    return config
+  }
 }
