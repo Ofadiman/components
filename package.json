@@ -13,7 +13,7 @@
     "lint:check": "eslint {src,codegen,storybook}/**/*.{ts,tsx,js,jsx}",
     "lint:fix": "eslint {src,codegen,storybook}/**/*.{ts,tsx,js,jsx} --fix",
     "postgen": "eslint -f ./eslint.formatter.js {src,codegen,storybook}/**/*.{ts,tsx,js,jsx} --fix || exit 0",
-    "storybook": "start-storybook -p 6006 -s src/assets --no-dll --config-dir storybook",
+    "dev": "start-storybook -p 6006 -s src/assets --no-dll --config-dir storybook",
     "test": "react-scripts test",
     "test:ci": "CI=true react-scripts test"
   },
