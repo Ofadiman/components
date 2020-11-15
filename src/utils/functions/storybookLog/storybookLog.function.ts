@@ -1,4 +1,7 @@
-export const storybookLog = (message: string) => (): void => {
-  // eslint-disable-next-line no-console
-  console.log(message)
+export const storybookLog = (message: string) => (...args: unknown[]): void => {
+  console.info(message)
+
+  if (args.length > 0) {
+    console.info(args)
+  }
 }

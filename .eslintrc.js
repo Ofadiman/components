@@ -487,7 +487,7 @@ module.exports = {
     '@typescript-eslint/no-parameter-properties': 'off',
     '@typescript-eslint/no-redeclare': 'off',
     '@typescript-eslint/no-require-imports': 'error',
-    '@typescript-eslint/no-shadow': ['error', { ignoreTypeValueShadow: true, hoist: 'all' }],
+    '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/no-this-alias': 'error',
     '@typescript-eslint/no-throw-literal': 'error',
     '@typescript-eslint/no-type-alias': 'off',
