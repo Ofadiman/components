@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import { storybookLog } from '../../utils/functions/storybookLog/storybookLog.function'
+import { storybookLog } from '../../utils/functions/storybookLog/storybookLog'
 import { GatsbyButton } from './GatsbyButton.component'
 
 storiesOf('GatsbyButton', module)

@@ -1,4 +1,4 @@
-import { storybookLog } from './storybookLog.function'
+import { storybookLog } from './storybookLog'
 
 describe('storybookLog function', () => {
   const consoleLogMessage = 'storybookLog called'
@@ -31,5 +31,11 @@ describe('storybookLog function', () => {
     expect(console.info).toHaveBeenCalledWith(consoleLogMessage)
     expect(console.info).toHaveBeenCalledWith(args)
     expect(console.info).toHaveBeenCalledTimes(2)
+  })
+
+  it('should not call `console.info` with no message and args passed', () => {
+    storybookLog()()
+
+    expect(console.info).not.toHaveBeenCalledTimes(1)
   })
 })

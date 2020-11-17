@@ -9,7 +9,7 @@ import { ReactComponent as PostgreSQLSvg } from '../../assets/icons/postgresql.i
 import { ReactComponent as ReactSvg } from '../../assets/icons/react.inline.svg'
 import { ReactComponent as TypeScriptSvg } from '../../assets/icons/typescript.inline.svg'
 import CodeImagePath from '../../assets/images/code-image.jpg'
-import { storybookLog } from '../../utils/functions/storybookLog/storybookLog.function'
+import { storybookLog } from '../../utils/functions/storybookLog/storybookLog'
 import { OfanotesCard } from './OfanotesCard.component'
 
 storiesOf('OfanotesCard', module).add('Default', () => (
