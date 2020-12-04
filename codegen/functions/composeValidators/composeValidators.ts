@@ -1,4 +1,6 @@
-export const composeValidators = (...validatorFunctions: ((promptValue: string) => null | string)[]) => (
+import { PlopValidator } from '../../types/PlopValidator.type'
+
+export const composeValidators = (...validatorFunctions: PlopValidator[]) => (
   promptValue: string
 ): boolean | string => {
   const validationErrors: string[] = []
