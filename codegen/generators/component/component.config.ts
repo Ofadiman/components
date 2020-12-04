@@ -1,27 +1,31 @@
 import { green } from 'chalk'
 import { Answers } from 'inquirer'
 
-import { composeValidators } from '../../utils/functions/composeValidators'
-import { requireInput } from '../../utils/functions/requireInput'
-import { requirePascalCase } from '../../utils/functions/requirePascalCase'
-import { PlopGeneratorConfig } from '../../utils/types/PlopGeneratorConfig.type'
+import { composeValidators } from '../../functions/composeValidators/composeValidators'
+import { requireInput } from '../../functions/requireInput/requireInput'
+import { requirePascalCase } from '../../functions/requirePascalCase/requirePascalCase'
+import { PlopGeneratorConfig } from '../../types/PlopGeneratorConfig.type'
 import { componentActions } from './component.actions'
 import { componentConst } from './component.const'
 
 export const componentConfig: PlopGeneratorConfig = {
-  actions: (answers: Answers | undefined) => {
-    return answers?.[componentConst.vars.shouldGenerateCode] ? componentActions : []
-  },
+  actions: (answers) => (!answers || !answers[componentConst.vars.shouldGenerateCode] ? [] : componentActions),
   description: 'Generate a component.',
   prompts: [
     {
-      message: 'Component name (pascal case string):',
+      message: 'Component name (pascal case string)',
       name: componentConst.vars.name,
       type: 'input',
       validate: composeValidators(
         requireInput('Component name cannot be empty!'),
         requirePascalCase('Component must be in pascal case!')
       )
+    },
+    {
+      choices: ['logical', 'presentational'],
+      message: 'Directory:',
+      name: componentConst.vars.directory,
+      type: 'list'
     },
     {
       choices: [

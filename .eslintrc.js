@@ -4,7 +4,7 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: { jsx: true },
     ecmaVersion: 2020,
-    project: './tsconfig.eslint.json',
+    project: './tsconfig.json',
     sourceType: 'module'
   },
   plugins: [
@@ -23,7 +23,6 @@ module.exports = {
     /**
      * @info react plugins
      */
-    'better-styled-components',
     'jest-dom',
     'react',
     'react-hooks',
@@ -316,7 +315,7 @@ module.exports = {
     /**
      * @plugin jest
      */
-    'jest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
+    'jest/consistent-test-it': 'off',
     'jest/expect-expect': 'error',
     'jest/lowercase-name': ['error', { ignoreTopLevelDescribe: true, allowedPrefixes: ['GET'] }],
     'jest/no-alias-methods': 'error',
@@ -362,7 +361,7 @@ module.exports = {
     'jest/valid-describe': 'error',
     'jest/valid-expect': 'error',
     'jest/valid-expect-in-promise': 'error',
-    'jest/valid-title': 'error',
+    'jest/valid-title': 'off',
 
     /**
      * @plugin import
@@ -794,27 +793,16 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'react/static-property-placement': 'off',
     'react/style-prop-object': 'off',
-    'react/void-dom-elements-no-children': 'off',
-
-    /**
-     * @plugin better-styled-components
-     */
-    'better-styled-components/sort-declarations-alphabetically': 'error'
+    'react/void-dom-elements-no-children': 'off'
   },
   overrides: [
-    {
-      files: ['plopfile.ts'],
-      rules: {
-        'import/no-default-export': 'off'
-      }
-    },
     {
       files: ['codegen/**/*.ts'],
       rules: {
         '@typescript-eslint/no-require-imports': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
-        '@typescript-eslint/strict-boolean-expressions': 'off'
+        '@typescript-eslint/strict-boolean-expressions': 'off',
       }
     },
     {

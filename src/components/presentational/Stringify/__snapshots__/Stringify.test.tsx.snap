@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stringify component match snapshot for Custom indentation 1`] = `
+<DocumentFragment>
+  <pre>
+    [
+        {
+                "foo": {
+                        "bar": "buzz"
+                }
+        },
+        null,
+        1,
+        "string",
+        [
+                "nest",
+                "array"
+        ]
+]
+  </pre>
+</DocumentFragment>
+`;
+
+exports[`Stringify component match snapshot for Default 1`] = `
+<DocumentFragment>
+  <pre>
+    [
+    {
+        "foo": {
+            "bar": "buzz"
+        }
+    },
+    null,
+    1,
+    "string",
+    [
+        "nest",
+        "array"
+    ]
+]
+  </pre>
+</DocumentFragment>
+`;
