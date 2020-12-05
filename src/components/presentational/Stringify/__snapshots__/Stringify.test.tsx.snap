@@ -2,7 +2,9 @@
 
 exports[`Stringify component match snapshot for Custom indentation 1`] = `
 <DocumentFragment>
-  <pre>
+  <pre
+    class="Stringify-root-2"
+  >
     [
         {
                 "foo": {
@@ -23,7 +25,9 @@ exports[`Stringify component match snapshot for Custom indentation 1`] = `
 
 exports[`Stringify component match snapshot for Default 1`] = `
 <DocumentFragment>
-  <pre>
+  <pre
+    class="Stringify-root-1"
+  >
     [
     {
         "foo": {

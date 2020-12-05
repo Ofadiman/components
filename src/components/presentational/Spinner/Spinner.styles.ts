@@ -37,7 +37,7 @@ export const useSpinnerStyles = makeStyles(
       height: '250px',
       width: '250px'
     },
-    regular: {
+    medium: {
       '& > div': {
         borderTop: '15px solid'
       },

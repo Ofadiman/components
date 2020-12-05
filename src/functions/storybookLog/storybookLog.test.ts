@@ -25,16 +25,16 @@ describe('storybookLog function', () => {
   it('should call `console.info` for passed args', () => {
     storybookLog()(...args)
 
-    expect(consoleInfoSpy).toHaveBeenCalledWith(JSON.stringify(args[0], null, 2))
-    expect(consoleInfoSpy).toHaveBeenCalledWith(JSON.stringify(args[1], null, 2))
+    expect(consoleInfoSpy).toHaveBeenCalledWith('arg #0', JSON.stringify(args[0], null, 2))
+    expect(consoleInfoSpy).toHaveBeenCalledWith('arg #1', JSON.stringify(args[1], null, 2))
   })
 
   it('should call `console.info` with passed message and args', () => {
     storybookLog(consoleLogMessage)(...args)
 
     expect(consoleInfoSpy).toHaveBeenCalledWith(consoleLogMessage)
-    expect(consoleInfoSpy).toHaveBeenCalledWith(JSON.stringify(args[0], null, 2))
-    expect(consoleInfoSpy).toHaveBeenCalledWith(JSON.stringify(args[1], null, 2))
+    expect(consoleInfoSpy).toHaveBeenCalledWith('arg #0', JSON.stringify(args[0], null, 2))
+    expect(consoleInfoSpy).toHaveBeenCalledWith('arg #1', JSON.stringify(args[1], null, 2))
     expect(consoleInfoSpy).toHaveBeenCalledTimes(3)
   })
 
