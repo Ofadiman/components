@@ -2,7 +2,7 @@ import React from 'react'
 
 import { renderComponent } from '../../../functions/renderComponent/renderComponent'
 import { Stringify } from './Stringify'
-import { stringifyStoryProps } from './Stringify.const'
+import { stringifyStoryProps } from './Stringify.props'
 
 describe('Stringify component', () => {
   stringifyStoryProps.forEach(({ title, ...props }) => {

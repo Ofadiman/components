@@ -29,5 +29,10 @@ export const componentActions: ActionType[] = [
     path: `src/components/${pv(componentConst.vars.directory)}/${pv(componentConst.vars.name)}/${pv(componentConst.vars.name)}.stories.tsx`,
     template: require('./templates/component.stories.template').template,
     type: 'add'
+  },
+  {
+    path: `src/components/${pv(componentConst.vars.directory)}/${pv(componentConst.vars.name)}/${pv(componentConst.vars.name)}.props.tsx`,
+    template: require('./templates/component.props.template').template,
+    type: 'add'
   }
 ]

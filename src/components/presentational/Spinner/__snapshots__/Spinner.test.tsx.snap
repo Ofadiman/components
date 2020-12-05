@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner component match snapshot for Default 1`] = `
+<DocumentFragment>
+  <div
+    class="Spinner-root-5 Spinner-regular-4"
+  >
+    <div
+      class="Spinner-arm-2"
+    />
+    <div
+      class="Spinner-arm-2"
+    />
+    <div
+      class="Spinner-arm-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Spinner component match snapshot for Large 1`] = `
+<DocumentFragment>
+  <div
+    class="Spinner-root-17 Spinner-large-15"
+  >
+    <div
+      class="Spinner-arm-14"
+    />
+    <div
+      class="Spinner-arm-14"
+    />
+    <div
+      class="Spinner-arm-14"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Spinner component match snapshot for Small 1`] = `
+<DocumentFragment>
+  <div
+    class="Spinner-root-11 Spinner-small-12"
+  >
+    <div
+      class="Spinner-arm-8"
+    />
+    <div
+      class="Spinner-arm-8"
+    />
+    <div
+      class="Spinner-arm-8"
+    />
+  </div>
+</DocumentFragment>
+`;

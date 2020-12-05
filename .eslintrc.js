@@ -548,7 +548,7 @@ module.exports = {
         printWidth: 120,
         semi: false,
         singleQuote: true,
-        quoteProps: 'consistent',
+        quoteProps: 'as-needed',
         tabWidth: 2,
         trailingComma: 'none'
       }
@@ -802,7 +802,7 @@ module.exports = {
         '@typescript-eslint/no-require-imports': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
-        '@typescript-eslint/strict-boolean-expressions': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off'
       }
     },
     {

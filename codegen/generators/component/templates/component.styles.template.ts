@@ -5,7 +5,7 @@ export const template = `
 import { makeStyles } from '@material-ui/core/styles'
 
 export const use${pv(componentConst.vars.name)}Styles = makeStyles(
-  (theme) => ({
+  () => ({
     root: {}
   }),
   {
