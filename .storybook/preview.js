@@ -7,7 +7,18 @@ import React from 'react'
 import { theme } from '../src/styles/theme'
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' }
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  viewport: {
+    viewports: {
+      fullHeight: {
+        name: 'fullHeight',
+        styles: {
+          width: '100%',
+          height: '100%'
+        }
+      }
+    }
+  }
 }
 
 addDecorator((Story) => (
