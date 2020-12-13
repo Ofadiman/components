@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Presentational/GatsbyButton Main 1`] = `
+<button
+  className="GatsbyButton-root-4 GatsbyButton-small-5"
+  onClick={[Function]}
+  type="button"
+>
+  Click me!
+</button>
+`;

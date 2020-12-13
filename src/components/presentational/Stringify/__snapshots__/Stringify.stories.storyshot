@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Presentational/Stringify Main 1`] = `
+<pre
+  className="Stringify-root-12"
+>
+  [
+    {
+        "foo": {
+            "bar": "buzz"
+        }
+    },
+    null,
+    1,
+    "string",
+    [
+        "nest",
+        "array"
+    ]
+]
+</pre>
+`;

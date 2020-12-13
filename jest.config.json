@@ -1,0 +1,6 @@
+{
+  "testMatch": ["**/jest.storyshots.ts"],
+  "moduleNameMapper": {
+    "\\.css$": "identity-obj-proxy"
+  }
+}

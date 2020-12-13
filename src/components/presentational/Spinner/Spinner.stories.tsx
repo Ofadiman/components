@@ -1,11 +1,22 @@
-import { storiesOf } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
 import { Spinner } from './Spinner'
-import { spinnerStoryProps } from './Spinner.props'
+import { SpinnerProps } from './Spinner.types'
 
-const clientApi = storiesOf('Components/Presentational/Spinner', module)
+export default {
+  argTypes: {
+    size: {
+      control: {
+        options: ['small', 'medium', 'large'],
+        type: 'inline-radio'
+      },
+      defaultValue: 'medium'
+    }
+  },
+  title: 'Components/Presentational/Spinner'
+} as Meta
 
-spinnerStoryProps.forEach(({ title, ...props }) => {
-  clientApi.add(title, () => <Spinner {...props} />)
-})
+const Template: Story<SpinnerProps> = (args) => <Spinner {...args} />
+
+export const Main = Template.bind({})

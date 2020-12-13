@@ -4,7 +4,7 @@ import React from 'react'
 import { useGatsbyButtonStyles } from './GatsbyButton.styles'
 import { GatsbyButtonProps } from './GatsbyButton.types'
 
-export const GatsbyButton: FC<GatsbyButtonProps> = ({ className, onClick, size = 'medium' }) => {
+export const GatsbyButton: FC<GatsbyButtonProps> = ({ className, onClick, size = 'medium', title }) => {
   const classes = useGatsbyButtonStyles()
 
   return (
@@ -16,7 +16,7 @@ export const GatsbyButton: FC<GatsbyButtonProps> = ({ className, onClick, size =
       onClick={onClick}
       type={'button'}
     >
-      {'Click me!'}
+      {title}
     </button>
   )
 }

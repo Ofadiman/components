@@ -15,7 +15,11 @@
     "storybook-build": "build-storybook -s public --no-dll --config-dir .storybook",
     "storybook-dev": "start-storybook -p 6006 -s src/assets --no-dll --config-dir .storybook",
     "test": "react-scripts test",
-    "test-ci": "CI=true react-scripts test"
+    "test-ci": "CI=true react-scripts test",
+    "test-storyshots": "jest",
+    "test-storyshots-ci": "CI=true jest",
+    "test-storyshots-update-snapshots": "jest -u",
+    "test-update-snapshots": "react-scripts test -u"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
@@ -28,6 +32,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@ofadiman/eslint-config-base": "^0.0.7",
@@ -70,6 +79,7 @@
     "eslint-plugin-unicorn": "^23.0.0",
     "execa": "^5.0.0",
     "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^10.5.1",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
