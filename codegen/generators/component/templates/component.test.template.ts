@@ -1,17 +1,21 @@
-import { pv } from '../../../functions/pv/pv'
+import { composePlopVariable, PlopHelpers } from '@ofadiman/plop'
+
 import { componentConst } from '../component.const'
+
+const camelCaseName = composePlopVariable(componentConst.vars.name, [PlopHelpers.CamelCase])
+const name = composePlopVariable(componentConst.vars.name)
 
 export const template = `
 import React from 'react'
 
 import { renderComponent } from '../../../functions/renderComponent/renderComponent'
-import { ${pv(componentConst.vars.name)} } from './${pv(componentConst.vars.name)}'
-import { ${pv(componentConst.vars.name, ['camelCase'])}StoryProps } from './${pv(componentConst.vars.name)}.props'
+import { ${name} } from './${name}'
+import { ${camelCaseName}StoryProps } from './${name}.props'
 
-describe('${pv(componentConst.vars.name)} component', () => {
-  ${pv(componentConst.vars.name, ['camelCase'])}StoryProps.forEach(({ title, ...props }) => {
+describe('${name} component', () => {
+  ${camelCaseName}StoryProps.forEach(({ title, ...props }) => {
     test(\`match snapshot for $\{title}\`, () => {
-      const { asFragment } = renderComponent(<${pv(componentConst.vars.name)} {...props} />)
+      const { asFragment } = renderComponent(<${name} {...props} />)
 
       expect(asFragment()).toMatchSnapshot()
     })

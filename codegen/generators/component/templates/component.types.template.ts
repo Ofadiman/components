@@ -1,8 +1,11 @@
-import { pv } from '../../../functions/pv/pv'
+import { composePlopVariable } from '@ofadiman/plop'
+
 import { componentConst } from '../component.const'
 
+const name = composePlopVariable(componentConst.vars.name)
+
 export const template = `
-export interface ${pv(componentConst.vars.name)}Props {
+export interface ${name}Props {
   className?: string
 }
 `

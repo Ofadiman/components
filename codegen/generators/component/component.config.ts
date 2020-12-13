@@ -1,10 +1,7 @@
+import { composeValidators, PlopGeneratorConfig, requireInput, requirePascalCase } from '@ofadiman/plop'
 import { green } from 'chalk'
 import { Answers } from 'inquirer'
 
-import { composeValidators } from '../../functions/composeValidators/composeValidators'
-import { requireInput } from '../../functions/requireInput/requireInput'
-import { requirePascalCase } from '../../functions/requirePascalCase/requirePascalCase'
-import { PlopGeneratorConfig } from '../../types/PlopGeneratorConfig.type'
 import { componentActions } from './component.actions'
 import { componentConst } from './component.const'
 

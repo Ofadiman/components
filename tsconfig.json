@@ -23,5 +23,5 @@
       "module": "Commonjs"
     }
   },
-  "include": ["src", "codegen", "storybook", "src/type-definitions", "plopfile.ts"]
+  "include": ["."]
 }

@@ -1,10 +1,13 @@
-/* eslint-disable prettier/prettier */
-import { pv } from '../../../functions/pv/pv'
+import { composePlopVariable, PlopHelpers } from '@ofadiman/plop'
+
 import { componentConst } from '../component.const'
+
+const name = composePlopVariable(componentConst.vars.name)
+const camelCaseName = composePlopVariable(componentConst.vars.name, [PlopHelpers.CamelCase])
 
 export const template = `
 import { ComponentStoriesProps } from '../../../types/ComponentStoriesProps.type'
-import { ${pv(componentConst.vars.name)}Props } from './${pv(componentConst.vars.name)}.types'
+import { ${name}Props } from './${name}.types'
 
-export const ${pv(componentConst.vars.name, ['camelCase'])}StoryProps: ComponentStoriesProps<${pv(componentConst.vars.name)}Props> = []
+export const ${camelCaseName}StoryProps: ComponentStoriesProps<${name}Props> = []
 `

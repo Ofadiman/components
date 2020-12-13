@@ -1,18 +1,22 @@
-/* eslint-disable prettier/prettier */
-import { pv } from '../../../functions/pv/pv'
+import { composePlopVariable, PlopHelpers } from '@ofadiman/plop'
+
 import { componentConst } from '../component.const'
+
+const camelCaseName = composePlopVariable(componentConst.vars.name, [PlopHelpers.CamelCase])
+const name = composePlopVariable(componentConst.vars.name)
+const pascalCaseDirectory = composePlopVariable(componentConst.vars.directory, [PlopHelpers.PascalCase])
 
 export const template = `
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import { ${pv(componentConst.vars.name)} } from './${pv(componentConst.vars.name)}'
-import { ${pv(componentConst.vars.name, ['camelCase'])}StoryProps } from './${pv(componentConst.vars.name)}.props'
+import { ${name} } from './${name}'
+import { ${camelCaseName}StoryProps } from './${name}.props'
 
-const clientApi = storiesOf('Components/${pv(componentConst.vars.directory, ['pascalCase'])}/${pv(componentConst.vars.name)}', module)
+const clientApi = storiesOf('Components/${pascalCaseDirectory}/${name}', module)
 
-${pv(componentConst.vars.name, ['camelCase'])}StoryProps.forEach(({ title, ...props }) => {
-  clientApi.add(title, () => <${pv(componentConst.vars.name)} {...props} />)
+${camelCaseName}StoryProps.forEach(({ title, ...props }) => {
+  clientApi.add(title, () => <${name} {...props} />)
 })
 
 `
